@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Meie+Script&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    height: 150px;
+    overflow: visible;
+}
+
+img {
+    border-radius: 50%;
+    height: 200px;
+}
+
+.magnata-visual > div > h1 {
+    font-family: 'Meie Script', cursive;
+    font-size: 3.5em;
+}
+
+.magnata-visual > div > h2 {
+    font-size: 1.5em;
+}
+
+nav > ul {
+    list-style: none;
+}
+
+nav > ul > li > .nav-link:hover {
+    color: #adb5bd  !important;
+    transition: 1s;
+}
