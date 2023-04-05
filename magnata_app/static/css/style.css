@@ -21,6 +21,8 @@ header {
 }
 
 img {
+    margin-top: 15px;
+    margin-left: 20px;
     border-radius: 50%;
     height: 200px;
 }
@@ -28,6 +30,7 @@ img {
 .magnata-visual > div > h1 {
     font-family: 'Meie Script', cursive;
     font-size: 3.5em;
+    text-decoration: underline;
 }
 
 .magnata-visual > div > h2 {
@@ -35,7 +38,9 @@ img {
 }
 
 nav > ul {
+    flex-direction: row;
     list-style: none;
+    margin-right: 20px;
 }
 
 nav > ul > li > .nav-link:hover {

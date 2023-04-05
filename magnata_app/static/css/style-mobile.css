@@ -1,0 +1,49 @@
+header {
+    height: auto;
+    flex-direction: column;
+}
+
+img {
+    margin-top: 0 !important;
+    margin-left: 0;
+    height: 100px;
+    width: 100px;
+}
+
+.magnata-visual {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: 10px;
+}
+
+.magnata-visual > div > h2 {
+    font-size: 1em;
+    text-align: center;
+}
+
+nav > ul {
+    flex-direction: column;
+    margin-right: 0;
+}
+
+nav > ul > li {
+    text-align: center;
+    padding-right: 30px;
+    padding-bottom: 15px;
+}
+
+.copy-info {
+    flex-direction: column;
+    text-align: center;
+}
+
+.privacy {
+    font-size: 0.9em;
+}
+
+footer > div > .d-flex > h5 {
+    visibility: hidden;
+}
+
+.fa-brands {
+    font-size: 2em !important;
+}
