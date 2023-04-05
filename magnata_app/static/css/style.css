@@ -11,6 +11,10 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 header {
     height: 150px;
     overflow: visible;
@@ -37,4 +41,27 @@ nav > ul {
 nav > ul > li > .nav-link:hover {
     color: #adb5bd  !important;
     transition: 1s;
+}
+
+.fa-brands {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 50%;
+    color: #eee;
+}
+
+.fa-brands:hover {
+    background-color: #eee;
+    color: #222;
+    transition: 0.8s;
+}
+
+.copy-info {
+    border-top: 1px solid #aaa;
+    width: 80%;
+}
+
+.copy-info > span > a {
+    color: #aaa;
 }
