@@ -3,7 +3,7 @@ header {
     flex-direction: column;
 }
 
-img {
+.logo-img {
     margin-top: 0 !important;
     margin-left: 0;
     height: 100px;
@@ -46,4 +46,11 @@ footer > div > .d-flex > h5 {
 
 .fa-brands {
     font-size: 2em !important;
+}
+
+
+.carousel {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 25px;
 }

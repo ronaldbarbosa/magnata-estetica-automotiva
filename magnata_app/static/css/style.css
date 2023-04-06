@@ -20,7 +20,7 @@ header {
     overflow: visible;
 }
 
-img {
+.logo-img {
     margin-top: 15px;
     margin-left: 20px;
     border-radius: 50%;
@@ -69,4 +69,10 @@ nav > ul > li > .nav-link:hover {
 
 .copy-info > span > a {
     color: #aaa;
+}
+
+.carousel {
+    width: 75%;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
