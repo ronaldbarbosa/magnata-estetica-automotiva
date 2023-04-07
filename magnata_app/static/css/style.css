@@ -76,3 +76,14 @@ nav > ul > li > .nav-link:hover {
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
+
+.servicos {
+    flex-wrap: wrap;
+}
+
+.servicos > .card {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+

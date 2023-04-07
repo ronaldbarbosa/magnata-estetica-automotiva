@@ -54,3 +54,12 @@ footer > div > .d-flex > h5 {
     margin-top: 0;
     margin-bottom: 25px;
 }
+
+.servicos {
+    flex-direction: column;
+}
+
+.servicos > .card {
+    margin: 0;
+    width: 100% !important;
+}
