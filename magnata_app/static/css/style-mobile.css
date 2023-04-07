@@ -51,7 +51,7 @@ footer > div > .d-flex > h5 {
 
 .carousel {
     width: 100%;
-    margin-top: 0;
+    margin-top: 35px;
     margin-bottom: 25px;
 }
 
@@ -62,4 +62,10 @@ footer > div > .d-flex > h5 {
 .servicos > .card {
     margin: 0;
     width: 100% !important;
+}
+
+.mapa > iframe {
+    width: 90%;
+    height: 300px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
