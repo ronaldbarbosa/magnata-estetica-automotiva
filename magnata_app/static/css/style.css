@@ -93,3 +93,7 @@ nav > ul > li > .nav-link:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.form-contato {
+    width: 50%;
+}
+

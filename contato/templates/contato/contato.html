@@ -1,0 +1,20 @@
+{% extends 'magnata_app/base.html' %}
+{% load static %}
+{% block body %}
+  {% if enviado %}
+    <script>
+      window.alert('Mensagem enviada com sucesso!')
+    </script>
+  {% endif %}
+  <div class="d-flex flex-column my-5 w-100 align-items-center">
+    <h3>Entre em contato</h3>
+    <form class="form-contato" method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <div class="d-flex mt-3 justify-content-end">
+        <button type="submit" class="btn btn-primary mx-3">Enviar mensagem</button>
+        <a href="{% url 'index' %}" class="btn btn-danger">Cancelar</a>
+      </div>
+    </form>
+  </div>
+{% endblock body %}
