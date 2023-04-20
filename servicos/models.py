@@ -17,4 +17,4 @@ class Servico(models.Model):
 class TipoServico(models.Model):
   nome = models.CharField(max_length=100)
   preco_base = models.DecimalField(max_digits=6, decimal_places=2)
-  img_url = models.URLField()
+  image = models.ImageField(upload_to='images/')
