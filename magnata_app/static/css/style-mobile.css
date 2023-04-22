@@ -11,21 +11,43 @@ header {
 }
 
 .magnata-visual {
-    border-bottom: 1px solid #aaa;
+    justify-content: center;
     margin-bottom: 10px;
+    width: 100%;
+}
+
+.magnata-visual > div > h1 {
+    font-size: 2.5em;
 }
 
 .magnata-visual > div > h2 {
     font-size: 1em;
-    text-align: center;
+    letter-spacing: 0.15em;
 }
 
-nav > ul {
+i#burguer {
+    display: flex;
+    font-size: 2em;
+
+}
+
+#itens {
+    display: none;
+}
+
+nav {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+nav > menu > ul {
     flex-direction: column;
     margin-right: 0;
+    align-items: center;
 }
 
-nav > ul > li {
+nav > menu > ul > li {
     text-align: center;
     padding-right: 30px;
     padding-bottom: 15px;

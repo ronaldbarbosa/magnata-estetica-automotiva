@@ -12,23 +12,29 @@
     <link href="{% static 'css/style-mobile.css' %}" rel="stylesheet" media="screen and (max-width: 500px)">
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 <body class="d-flex flex-column min-vh-100">
-<header class="text-bg-dark d-flex justify-content-between align-items-center">
+<header class="d-flex justify-content-between align-items-center">
     <div class="magnata-visual d-flex">
-        <img src="{% static 'images/magnata-logo.png' %}" class="logo-img text-bg-dark">
-        <div class="d-flex flex-column justify-content-center mx-3">
-            <h1>Magnata</h1>
-            <h2>Estética Automotiva</h2>
+        <img src="{% static 'images/magnata-logo.png' %}" class="logo-img">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <h1 class="">Magnata</h1>
+            <h2 class="text-center">Estética Automotiva</h2>
         </div>
     </div>
-    <nav class="navbar navbar-dark">
-        <ul class="d-flex">
-            <li class="mx-3 text-uppercase"><a href="{% url 'index' %}" class="nav-link fs-5">Início</a></li>
-            <li class="mx-3 text-uppercase"><a href="{% url 'servicos' %}" class="nav-link fs-5">Serviços</a></li>
-            <li class="mx-3 text-uppercase"><a href="" class="nav-link fs-5">Agenda</a></li>
-            <li class="mx-3 text-uppercase"><a href="{% url 'contato' %}" class="nav-link fs-5">Contato</a></li>
-        </ul>
+    <i id="burguer" class="material-icons mb-3 mx-3 text-light" onclick="clickMenu()">menu</i>
+    <nav class="d-flex">
+
+        <menu id="itens">
+            <ul class="d-flex">
+                <li class="mx-3 text-uppercase"><a href="{% url 'index' %}" class="nav-link fs-5">Início</a></li>
+                <li class="mx-3 text-uppercase"><a href="{% url 'servicos' %}" class="nav-link fs-5">Serviços</a></li>
+                <li class="mx-3 text-uppercase"><a href="" class="nav-link fs-5">Agenda</a></li>
+                <li class="mx-3 text-uppercase"><a href="{% url 'contato' %}" class="nav-link fs-5">Contato</a></li>
+            </ul>
+        </menu>
     </nav>
 </header>
 {% block body %}
@@ -57,6 +63,15 @@
         <span class="mb-3 mb-md-0 text-light mx-2">Desenvolvido por: <a href="">Ronald Barbosa</a></span>
     </div>
 </footer>
+<script>
+    function clickMenu() {
+        if(itens.style.display == 'none') {
+            itens.style.display = 'flex'
+        } else {
+            itens.style.display = 'none'
+        }
+    }
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,14 +1,13 @@
 from django.db import models
 
-class Servico(models.Model):
-  TIPO_VEICULO = [
-    ('C', 'Carro'),
-    ('M', 'Moto')
-  ]
+TIPO_VEICULO = [
+  ('C', 'Carro'),
+  ('M', 'Moto')
+]
 
+class Servico(models.Model):
   cliente = models.CharField(max_length=150)
   veiculo = models.CharField(max_length=50)
-  tipo_veiculo = models.CharField(max_length=1, choices=TIPO_VEICULO)
   tipo_servico = models.ForeignKey('TipoServico', on_delete=models.CASCADE)
   data = models.DateField()
   hora = models.TimeField()
@@ -17,5 +16,6 @@ class Servico(models.Model):
 class TipoServico(models.Model):
   nome = models.CharField(max_length=100)
   descricao = models.CharField(max_length=500)
+  tipo_veiculo = models.CharField(max_length=1, choices=TIPO_VEICULO)
   preco_base = models.DecimalField(max_digits=6, decimal_places=2)
   image = models.ImageField(upload_to='images/')
