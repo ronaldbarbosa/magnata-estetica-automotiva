@@ -16,17 +16,18 @@
 
 </head>
 <body class="d-flex flex-column min-vh-100">
-<header class="d-flex justify-content-between align-items-center">
-    <div class="magnata-visual d-flex">
-        <img src="{% static 'images/magnata-logo.png' %}" class="logo-img">
-        <div class="d-flex flex-column justify-content-center align-items-center">
-            <h1 class="">Magnata</h1>
-            <h2 class="text-center">Estética Automotiva</h2>
+<header class="d-flex justify-content-between align-items-center bg-color-dark">
+    <div class="d-flex">
+        <div class="magnata-visual d-flex">
+            <img src="{% static 'images/magnata-logo.png' %}" class="logo-img bg-color-dark">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <h1 class="">Magnata</h1>
+                <h2 class="text-center">Estética Automotiva</h2>
+            </div>
         </div>
+        <i id="burguer" class="material-icons mb-3 mx-3 text-light" onclick="clickMenu()">menu</i>
     </div>
-    <i id="burguer" class="material-icons mb-3 mx-3 text-light" onclick="clickMenu()">menu</i>
     <nav class="d-flex">
-
         <menu id="itens">
             <ul class="d-flex">
                 <li class="mx-3 text-uppercase"><a href="{% url 'index' %}" class="nav-link fs-5">Início</a></li>
@@ -39,7 +40,7 @@
 </header>
 {% block body %}
 {% endblock body %}
-<footer class="d-flex footer mt-auto bg-dark flex-column align-items-center py-3">
+<footer class="d-flex footer mt-auto flex-column align-items-center py-3 bg-color-dark">
     <div class="d-flex flex-row justify-content-between align-items-center w-75">
         <div class="privacy">
             <h5 class="fs-6"><a href="" class="text-light">Política de privacidade</a></h5>
@@ -60,7 +61,7 @@
     </div>
     <div class="copy-info d-flex pt-2 justify-content-between">
         <span class="mb-3 mb-md-0 text-light mx-2">&copy; <script>document.write(new Date().getFullYear())</script> - Magnata Estética Automotiva</span>
-        <span class="mb-3 mb-md-0 text-light mx-2">Desenvolvido por: <a href="">Ronald Barbosa</a></span>
+        <span class="mb-3 mb-md-0 text-light mx-2">Desenvolvido por: <a href="https://github.com/ronaldbarbosa" target="_blank">Ronald Barbosa</a></span>
     </div>
 </footer>
 <script>
