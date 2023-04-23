@@ -8,12 +8,14 @@ class ContatoForm(forms.ModelForm):
     labels = {
       'nome': 'Nome',
       'email': 'Email',
+      'celular': 'Celular',
       'assunto': 'Assunto',
       'mensagem': 'Mensagem'
     }
     widgets = {
       'nome': forms.TextInput(attrs={'class': 'form-control'}),
       'email': forms.EmailInput(attrs={'class': 'form-control'}),
+      'celular': forms.TextInput(attrs={'class': 'form-control'}),
       'assunto': forms.TextInput(attrs={'class': 'form-control'}),
       'mensagem': forms.Textarea(attrs={'class': 'form-control'})
     }
