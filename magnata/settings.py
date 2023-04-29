@@ -82,12 +82,12 @@ WSGI_APPLICATION = 'magnata.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'magnata_db',
         'USER': config('POSTGRES_USER'),
         'PASSWORD': config('POSTGRES_PASSWORD'),
         'HOST': 'localhost',
-        'PORT': ''
+        'PORT': '5432'
     }
 }
 

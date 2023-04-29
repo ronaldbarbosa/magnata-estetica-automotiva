@@ -7,7 +7,7 @@ django-cloudinary-storage==0.3.0
 idna==3.4
 Pillow==9.5.0
 python-decouple==3.8
-requests==2.28.2
+requests==2.29.0
 six==1.16.0
-sqlparse==0.4.3
-urllib3==1.26.15
+sqlparse==0.4.4
+urllib3==2.0.0
