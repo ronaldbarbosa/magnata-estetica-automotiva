@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from twilio.rest import Client
+from decouple import config
 
 from .forms import ContatoForm
 from .models import Contato
@@ -25,8 +27,20 @@ def contato(request):
     )
 
     contato.save()
+    enviar_mensagem(contato)
 
     return render(request, 'contato/contato.html', {
       'form': ContatoForm,
       'enviado': True
     })
+
+def enviar_mensagem(contato):
+  account_sid = config('TWILIO_SID')
+  auth_token = config('TWILIO_AUTH_TOKEN')
+  client = Client(account_sid, auth_token)
+
+  message = client.messages.create(
+    from_=config('TWILIO_FROM'),
+    body=f'Magnata: {contato.mensagem}',
+    to=config('TWILIO_TO')
+  )
