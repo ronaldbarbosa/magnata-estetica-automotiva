@@ -12,8 +12,8 @@
       {% csrf_token %}
       {{ form.as_p }}
       <div class="d-flex mt-3 justify-content-end">
-        <button type="submit" class="btn btn-primary mx-3">Enviar mensagem</button>
-        <a href="{% url 'index' %}" class="btn btn-danger">Cancelar</a>
+        <button type="submit" class="btn btn-outline-dark mx-3">Enviar mensagem</button>
+        <a href="{% url 'index' %}" class="btn btn-outline-secondary">Cancelar</a>
       </div>
     </form>
   </div>

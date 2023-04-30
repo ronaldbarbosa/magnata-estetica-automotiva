@@ -1,7 +1,15 @@
+/* Header */
 header {
     height: auto;
     flex-direction: column !important;
+}
 
+header > d-flex {
+    flex-direction: row;
+    padding: 5px 0 5px 0;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around !important;
 }
 
 .logo-img {
@@ -9,17 +17,6 @@ header {
     margin-left: 0;
     height: 85px;
     width: 85px;
-}
-
-header.d-flex {
-    flex-direction: row;
-    padding: 5px 0 5px 0;
-}
-
-header > .d-flex {
-    width: 100%;
-    align-items: center;
-    justify-content: space-around !important;
 }
 
 .magnata-visual {
@@ -65,6 +62,7 @@ nav > menu > ul > li {
     padding-bottom: 10px;
 }
 
+/* Footer */
 .copy-info {
     flex-direction: column;
     text-align: center;
@@ -82,13 +80,20 @@ footer > div > .d-flex > h5 {
     font-size: 2em !important;
 }
 
-
+/* Index */
 .carousel {
     width: 100%;
     margin-top: 35px;
     margin-bottom: 25px;
 }
 
+.mapa > iframe {
+    width: 90%;
+    height: 300px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* Serviços */
 .servicos {
     flex-direction: column;
 }
@@ -98,12 +103,7 @@ footer > div > .d-flex > h5 {
     width: 100% !important;
 }
 
-.mapa > iframe {
-    width: 90%;
-    height: 300px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
+/* Contato */
 .form-contato {
     width: 90%;
 }

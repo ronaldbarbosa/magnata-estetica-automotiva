@@ -1,19 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-.bg-color-dark {
-    background-color: #111010;
-}
-
-.bg-color-gold {
-    background-color: #986f34;
 }
 
 body {
@@ -24,10 +15,19 @@ a {
     text-decoration: none;
 }
 
+/* BG Classes */
+.bg-color-dark {
+    background-color: #111010;
+}
+
+.bg-color-gold {
+    background-color: #986f34;
+}
+
+/* Header */
 header {
     height: 150px;
     overflow: visible;
-    font-family: 'Alegreya Sans SC', sans-serif;
 }
 
 .logo-img {
@@ -39,10 +39,10 @@ header {
 
 .magnata-visual > div {
     text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .magnata-visual > div > h1 {
-    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 3.2em;
     color: #e0e0e0;
@@ -52,7 +52,6 @@ header {
 }
 
 .magnata-visual > div > h2 {
-    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 1.2em;
     color: #986f34;
@@ -71,10 +70,35 @@ nav > menu > ul {
     color: #e0e0e0;
 }
 
+nav > menu > ul > li {
+    display: inline-block;
+    position: relative;
+}
+
+nav > menu > ul > li:after {
+    border: 1px solid #986f34;
+    border-radius: 2px;
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom right;
+    transition: transform 0.15s;
+}
+
+nav > menu > ul > li:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
 nav > menu > ul > li > .nav-link:hover {
     color: #986f34 !important;
 }
 
+/*Footer*/
 .fa-brands {
     margin: 5px;
     padding: 10px;
@@ -102,13 +126,20 @@ nav > menu > ul > li > .nav-link:hover {
     color: #986f34;
 }
 
+/*Index*/
 .carousel {
     width: 75%;
     margin-top: 50px;
     margin-bottom: 50px;
 }
 
+.mapa > iframe {
+    width: 75%;
+    height: 500px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 
+/*Serviços*/
 .servicos {
     flex-wrap: wrap;
 }
@@ -118,12 +149,7 @@ nav > menu > ul > li > .nav-link:hover {
     margin-right: 15px;
 }
 
-.mapa > iframe {
-    width: 75%;
-    height: 500px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
+/* Contato */
 .form-contato {
     width: 50%;
 }
