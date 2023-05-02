@@ -24,6 +24,12 @@ a {
     background-color: #986f34;
 }
 
+/*Global*/
+.h2-underline {
+    text-align: center;
+    color: #111010;
+}
+
 /* Header */
 header {
     height: 150px;
@@ -127,10 +133,37 @@ nav > menu > ul > li > .nav-link:hover {
 }
 
 /*Index*/
-.carousel {
-    width: 75%;
-    margin-top: 50px;
-    margin-bottom: 50px;
+main {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.promocoes {
+    justify-content: space-around;
+    margin: 15px;
+    padding-bottom: 50px;
+    border-bottom: 4px solid #986f34;
+}
+
+.promocoes > .card {
+    width: 500px;
+}
+
+.promocoes > .card > img {
+    height: 300px;
+    object-fit: cover;
+    opacity: 0.7;
+    transition: 0.6s;
+}
+
+.promocoes > .card > img:hover {
+    opacity: 1;
+    transition: 0.6s;
+}
+
+.promocoes > .card > .card-body > .preco > p {
+    font-size: 1.5em;
 }
 
 .mapa > iframe {

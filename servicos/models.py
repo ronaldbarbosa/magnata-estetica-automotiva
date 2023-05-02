@@ -28,11 +28,15 @@ class TipoServico(models.Model):
   preco_base = models.DecimalField(max_digits=6, decimal_places=2)
   image = models.ImageField(upload_to='images/')
 
+  def __str__(self):
+    return f'{self.nome}'
+
 class Promocao(models.Model):
   class Meta:
     verbose_name = 'Promoção'
     verbose_name_plural = 'Promoções'
 
-  tipo_servico = models.ForeignKey('TipoServico', on_delete=models.CASCADE)
+  tipo_servico = models.ForeignKey('TipoServico', on_delete=models.CASCADE, null=True)
+  descricao = models.CharField(max_length=300, default='')
   preco_promocao = models.DecimalField(max_digits=6, decimal_places=2)
   valido_ate = models.DateField()

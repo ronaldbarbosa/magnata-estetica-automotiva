@@ -81,10 +81,30 @@ footer > div > .d-flex > h5 {
 }
 
 /* Index */
-.carousel {
+main {
     width: 100%;
-    margin-top: 35px;
-    margin-bottom: 25px;
+}
+
+.promocoes {
+    flex-direction: column;
+}
+
+.promocoes > .card {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.promocoes > .card > img {
+    opacity: 1;
+    height: 250px;
+}
+
+.promocoes > .card > .card-body > .preco {
+    flex-direction: column;
+}
+
+.promocoes > .card > .card-body > .preco > p {
+    font-size: 1.2em;
 }
 
 .mapa > iframe {
