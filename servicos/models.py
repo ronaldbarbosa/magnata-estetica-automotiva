@@ -40,3 +40,6 @@ class Promocao(models.Model):
   descricao = models.CharField(max_length=300, default='')
   preco_promocao = models.DecimalField(max_digits=6, decimal_places=2)
   valido_ate = models.DateField()
+
+  def __str__(self):
+    return f'Promoção {self.tipo_servico}'

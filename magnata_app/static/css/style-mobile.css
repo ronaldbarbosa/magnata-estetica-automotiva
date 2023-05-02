@@ -90,13 +90,13 @@ main {
 }
 
 .promocoes > .card {
-    width: 100%;
+    width: 100% !important;
     margin-bottom: 15px;
 }
 
 .promocoes > .card > img {
     opacity: 1;
-    height: 250px;
+    height: 200px;
 }
 
 .promocoes > .card > .card-body > .preco {
@@ -115,12 +115,14 @@ main {
 
 /* Serviços */
 .servicos {
+    align-items: center;
     flex-direction: column;
 }
 
 .servicos > .card {
     margin: 0;
-    width: 100% !important;
+    width: 90% !important;
+    opacity: 1;
 }
 
 /* Contato */
