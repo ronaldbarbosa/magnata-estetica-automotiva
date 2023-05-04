@@ -1,5 +1,7 @@
+import asyncio
+
 from django.shortcuts import render
-from twilio.rest import Client
+from django.core.mail import send_mail
 from decouple import config
 
 from .forms import ContatoForm
@@ -27,20 +29,21 @@ def contato(request):
     )
 
     contato.save()
-    enviar_mensagem(contato)
+    sucesso = enviar_email(contato)
 
-    return render(request, 'contato/contato.html', {
-      'form': ContatoForm,
-      'enviado': True
-    })
+    if sucesso != 0:
+      return render(request, 'contato/contato.html', {
+        'form': ContatoForm,
+        'enviado': 'sucesso'
+      })
+    else:
+      return render(request, 'contato/contato.html', {
+        'form': ContatoForm,
+        'enviado': 'erro'
+      })
 
-def enviar_mensagem(contato):
-  account_sid = config('TWILIO_SID')
-  auth_token = config('TWILIO_AUTH_TOKEN')
-  client = Client(account_sid, auth_token)
-
-  message = client.messages.create(
-    from_=config('TWILIO_FROM'),
-    body=f'Magnata: {contato.mensagem}',
-    to=config('TWILIO_TO')
-  )
+def enviar_email(contato):
+  try:
+    return send_mail(contato.assunto, contato.mensagem, config('EMAIL_FROM'), [config('EMAIL_TO')], True)
+  except:
+    return 0

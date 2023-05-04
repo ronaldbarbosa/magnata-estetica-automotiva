@@ -7,5 +7,5 @@ class Contato(models.Model):
   celular = models.CharField(max_length=15, validators=[MinLengthValidator(15)])
   assunto = models.CharField(max_length=50)
   mensagem = models.TextField(max_length=300)
-  data = models.DateTimeField(auto_now=True)
+  data = models.DateTimeField(auto_now_add=True)
 # TODO: adicionar data e hora do contato

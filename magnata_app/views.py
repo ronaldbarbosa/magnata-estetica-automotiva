@@ -5,7 +5,7 @@ from servicos.models import Promocao, TipoServico
 
 def index(request):
     promocoes = Promocao.objects.all()
-    servicos = TipoServico.objects.all()[:5]
+    servicos = TipoServico.objects.all()[:3]
 
 
     if promocoes and servicos:
