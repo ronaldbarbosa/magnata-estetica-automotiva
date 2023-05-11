@@ -27,7 +27,7 @@ SECRET_KEY = config('PROJECT_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', config('DB_HOST')]
 
 
 # Application definition
@@ -83,10 +83,10 @@ WSGI_APPLICATION = 'magnata.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'magnata_db',
-        'USER': config('POSTGRES_USER'),
-        'PASSWORD': config('POSTGRES_PASSWORD'),
-        'HOST': 'localhost',
+        'NAME': 'magnata',
+        'USER': config('MAGNATA_DB_USER'),
+        'PASSWORD': config('MAGNATA_DB_PASSWORD'),
+        'HOST': config('MAGNATA_DB_HOST'),
         'PORT': '5432'
     }
 }

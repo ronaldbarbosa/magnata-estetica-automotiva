@@ -1,12 +1,11 @@
 from django.shortcuts import render
 
-from servicos.models import Promocao, TipoServico
+from servicos.models import Promocao, Servico
 
 
 def index(request):
     promocoes = Promocao.objects.all()
-    servicos = TipoServico.objects.all()[:3]
-
+    servicos = Servico.objects.all()[:3]
 
     if promocoes and servicos:
         return render(request, 'magnata_app/index.html', {
