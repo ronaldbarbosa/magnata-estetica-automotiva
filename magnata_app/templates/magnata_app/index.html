@@ -8,13 +8,13 @@
     <div class="d-flex promocoes align-items-center">
       {% for promocao in promocoes %}
         <div class="card shadow">
-          <img src="{{promocao.tipo_servico.image.url}}" class="card-img-top" alt="...">
+          <img src="{{promocao.servico.image.url}}" class="card-img-top" alt="...">
           <div class="d-flex card-body flex-column">
-            <h3>{{promocao.tipo_servico.nome}}</h3>
+            <h3>{{promocao.servico.nome}}</h3>
             <p>{{promocao.descricao}}</p>
             <div class="d-flex preco mt-auto justify-content-between align-items-center">
               <p>
-                De R$<span class="text-decoration-line-through">{{promocao.tipo_servico.preco_base}}</span>
+                De R$<span class="text-decoration-line-through">{{promocao.servico.preco_base}}</span>
                 por R$<span>{{promocao.preco_promocao}}</span>
               </p>
               <div class="btn btn-secondary bg-color-dark">Saiba mais</div>

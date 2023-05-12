@@ -9,6 +9,7 @@ class DemandaAdmin(admin.ModelAdmin):
 @admin.register(Servico)
 class ServicoAdmin(admin.ModelAdmin):
   list_display = ('nome', 'preco_base')
+  list_filter = ('categoria', 'tipo_servico', 'tipo_veiculo')
 
 @admin.register(Promocao)
 class PromocaoAdmin(admin.ModelAdmin):
