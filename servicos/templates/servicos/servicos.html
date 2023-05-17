@@ -1,8 +1,10 @@
 {% extends 'magnata_app/base.html' %}
 {% load static %}
-{%
 {% block body %}
    <div class="d-flex w-100 mt-5 justify-content-center servicos">
+     <div class="text-left w-75">
+       <h3>Sobre os nossos serviços</h3>
+     </div>
      {% if servicos_carro %}
        <h3 class="w-100 text-center my-3">Serviços para o seu carro</h3>
        {% for servico in servicos_carro %}
@@ -17,7 +19,7 @@
              </div>
              <div class="d-flex flex-row justify-content-between align-items-center mt-4 mt-auto">
                <p class="card-text"><small class="text-body-secondary">À partir de: R$ {{ servico.preco_base }}</small></p>
-               <p class="btn btn-dark"><a href="#" class="text-light">Saiba mais</a></p>
+               <p class="btn btn-dark"><a href="{% url 'servico_info' servico.id %}" class="text-light">Saiba mais</a></p>
              </div>
            </div>
          </div>
@@ -38,7 +40,7 @@
              </div>
              <div class="d-flex flex-row justify-content-between align-items-center mt-4 mt-auto">
                <p class="card-text"><small class="text-body-secondary">À partir de: R$ {{ servico.preco_base }}</small></p>
-               <p class="btn btn-dark"><a href="#" class="text-light">Saiba mais</a></p>
+               <p class="btn btn-dark"><a href="{% url 'servico_info' servico.id %}" class="text-light">Saiba mais</a></p>
              </div>
            </div>
          </div>
