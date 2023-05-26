@@ -1,3 +1,4 @@
+from cloudinary.models import CloudinaryField
 from django.db import models
 
 TIPO_VEICULO = [
@@ -41,7 +42,8 @@ class Servico(models.Model):
     tipo_servico = models.CharField(max_length=10, choices=TIPO_SERVICO, verbose_name='Tipo de serviço')
     tipo_veiculo = models.CharField(max_length=1, choices=TIPO_VEICULO, verbose_name='Tipo de veículo')
     preco_base = models.DecimalField(max_digits=6, decimal_places=2)
-    image = models.ImageField(upload_to='images/')
+    imagem = CloudinaryField('image')
+    video = CloudinaryField('video', blank=True)
 
     def __str__(self):
         return f'{self.nome}'
