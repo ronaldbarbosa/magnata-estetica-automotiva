@@ -8,7 +8,7 @@ TIPO_VEICULO = [
 
 CATEGORIA_SERVICO = [
     ('SIMPLES', 'Simples'),
-    ('TECNICO', 'Técnico')
+    ('DETALHADO', 'Detalhado')
 ]
 
 TIPO_SERVICO = [

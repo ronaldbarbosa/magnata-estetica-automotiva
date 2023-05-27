@@ -1,0 +1,48 @@
+{% extends 'magnata_app/base.html' %}
+{% load static %}
+{% block body %}
+    <div class="d-flex w-100 mt-5 justify-content-center servicos">
+<!--     <div class="text-left w-75">-->
+<!--       <h3>Sobre os nossos serviços</h3>-->
+<!--     </div>-->
+     {% if servicos_carro %}
+       <h3 class="w-100 text-center my-3">Serviços para o seu carro</h3>
+       {% for servico in servicos_carro %}
+         <div class="card mb-5 w-25 shadow">
+           <img src="{{ servico.imagem.url }}" class="card-img-top" alt="{{ servico.nome }}" style="width:100%; height: 400px">
+           <div class="card-body d-flex flex-column">
+             <h5 class="card-title">{{ servico.nome }}</h5>
+             <div class="d-flex justify-content-between mt-auto">
+               <p>Tipo de serviço: <span class="badge text-bg-success">{{ servico.categoria }}</span></p>
+               <p>Interno ou externo: <span class="badge text-bg-success">{{ servico.tipo_servico }}</span></p>
+             </div>
+             <div class="d-flex flex-row justify-content-between align-items-center mt-4 mt-auto">
+               <p class="card-text"><small class="text-body-secondary">À partir de: R$ {{ servico.preco_base }}</small></p>
+               <p class="btn btn-dark"><a href="{% url 'servico_info' servico.id %}" class="text-light">Saiba mais</a></p>
+             </div>
+           </div>
+         </div>
+       {% endfor %}
+     {% endif %}
+
+
+     {% if servicos_moto %}
+       <h3 class="w-100 text-center my-3">Serviços para a sua moto</h3>
+       {% for servico in servicos_moto %}
+         <div class="card mb-5 w-25 shadow">
+           <img src="{{ servico.imagem.url }}" class="card-img-top" alt="{{ servico.nome }}" style="width:100%; height: 400px">
+           <div class="card-body d-flex flex-column">
+             <h5 class="card-title">{{ servico.nome }}</h5>
+             <div>
+               <p>Serviço: <span class="badge text-bg-success">{{ servico.categoria }}</span></p>
+             </div>
+             <div class="d-flex flex-row justify-content-between align-items-center mt-4 mt-auto">
+               <p class="card-text"><small class="text-body-secondary">À partir de: R$ {{ servico.preco_base }}</small></p>
+               <p class="btn btn-dark"><a href="{% url 'servico_info' servico.id %}" class="text-light">Saiba mais</a></p>
+             </div>
+           </div>
+         </div>
+       {% endfor %}
+     {% endif %}
+   </div>
+{% endblock body %}
