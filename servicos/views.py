@@ -18,6 +18,13 @@ def resultados_servicos(request):
   tipo_veiculo = request.GET.get('tipo_veiculo')
   categoria_servico = request.GET.get('categoria_servico')
   tipo_servico = request.GET.get('tipo_servico')
+  buscar = request.GET.get('buscar')
+
+  if (buscar == 'todos'):
+    context = {
+      'servicos_moto': Servico.objects.all().filter(tipo_veiculo='M'),
+      'servicos_carro': Servico.objects.all().filter(tipo_veiculo='C')
+    }
 
   if (tipo_veiculo == 'moto'):
     context = {

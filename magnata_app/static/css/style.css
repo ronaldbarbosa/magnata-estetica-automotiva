@@ -192,6 +192,7 @@ main {
 
 .servicos > .card > img {
     object-fit: cover;
+    height: 350px;
 }
 
 /* Contato */

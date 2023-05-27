@@ -1,35 +1,39 @@
 {% extends 'magnata_app/base.html' %}
 {% load static %}
 {% block body %}
+<div class="d-flex mt-5 flex-column align-items-center text-center">
+  <h2 class="fs-3">Nós vamos te ajudar a escolher o serviço certo para você e seu veículo!</h2>
+  {% if tipo_veiculo == None or categoria_servico == None or tipo_servico == None %}
+    <div class="d-flex mt-5 flex-column align-items-center">
+      <h3 class="fs-5">Qual tipo de veiculo?</h3>
+      <div>
+        <a href="{% url 'servicos' %}?tipo_veiculo=moto" class="btn btn-dark">Moto</a>
+        <a href="{% url 'servicos' %}?tipo_veiculo=carro" class="btn btn-dark">Carro</a>
+      </div>
+    </div>
+  {% endif %}
 
-{% if tipo_veiculo == None or categoria_servico == None or tipo_servico == None %}
-<div class="d-flex mt-5 flex-column">
-  <h3 class="fs-5">Qual tipo de veiculo?</h3>
-  <div>
-    <a href="{% url 'servicos' %}?tipo_veiculo=moto" class="btn btn-dark">Moto</a>
-    <a href="{% url 'servicos' %}?tipo_veiculo=carro" class="btn btn-dark">Carro</a>
-  </div>
-</div>
-{% endif %}
+  {% if tipo_veiculo != None %}
+    <div class="d-flex mt-5 flex-column align-items-center">
+      <h3 class="fs-5">Qual tipo de serviço está buscando?</h3>
+      <div>
+        <a href="{% url 'resultados' %}?categoria_servico=simples&tipo_veiculo={{tipo_veiculo}}" class="btn btn-dark">Simples</a>
+        <a href="{% url 'servicos' %}?categoria_servico=detalhado&tipo_veiculo={{tipo_veiculo}}" class="btn btn-dark">Detalhado</a>
+      </div>
+    </div>
+  {% endif %}
 
-{% if tipo_veiculo != None %}
-<div class="d-flex mt-5 flex-column">
-  <h3 class="fs-5">Qual tipo de serviço está buscando?</h3>
-  <div>
-    <a href="{% url 'resultados' %}?categoria_servico=simples&tipo_veiculo={{tipo_veiculo}}" class="btn btn-dark">Simples</a>
-    <a href="{% url 'servicos' %}?categoria_servico=detalhado&tipo_veiculo={{tipo_veiculo}}" class="btn btn-dark">Detalhado</a>
-  </div>
-</div>
-{% endif %}
+  {% if tipo_veiculo == 'carro' and categoria_servico == 'detalhado' and tipo_servico == None %}
+    <div class="d-flex mt-5 flex-column align-items-center">
+      <h3 class="fs-5">Interno ou externo?</h3>
+      <div>
+        <a href="{% url 'resultados' %}?tipo_servico=interno&tipo_veiculo={{tipo_veiculo}}&categoria_servico={{categoria_servico}}" class="btn btn-dark">Interno</a>
+        <a href="{% url 'resultados' %}?tipo_servico=externo&tipo_veiculo={{tipo_veiculo}}&categoria_servico={{categoria_servico}}" class="btn btn-dark">Externo</a>
+        <a href="{% url 'resultados' %}?tipo_servico=ambos&tipo_veiculo={{tipo_veiculo}}&categoria_servico={{categoria_servico}}" class="btn btn-dark">Ambos</a>
+      </div>
+    </div>
+  {% endif %}
 
-{% if tipo_veiculo == 'carro' and categoria_servico == 'detalhado' and tipo_servico == None %}
-<div class="d-flex mt-5 flex-column">
-  <h3 class="fs-5">Interno ou externo?</h3>
-  <div>
-    <a href="{% url 'resultados' %}?tipo_servico=interno&tipo_veiculo={{tipo_veiculo}}&categoria_servico={{categoria_servico}}" class="btn btn-dark">Interno</a>
-    <a href="{% url 'resultados' %}?tipo_servico=externo&tipo_veiculo={{tipo_veiculo}}&categoria_servico={{categoria_servico}}" class="btn btn-dark">Externo</a>
-    <a href="{% url 'resultados' %}?tipo_servico=ambos&tipo_veiculo={{tipo_veiculo}}&categoria_servico={{categoria_servico}}" class="btn btn-dark">Ambos</a>
-  </div>
+  <h4 class="fs-5 mt-5">Ou, se preferir, <a href="{% url 'resultados' %}?buscar=todos">clique aqui</a> para visualizar todos os nossos serviços.</h4>
 </div>
-{% endif %}
 {% endblock body %}
