@@ -34,6 +34,7 @@ ALLOWED_HOSTS = ['127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -86,6 +87,13 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.slqite3',
     }
+}
+
+# Jazzmin settings
+JAZZMIN_SETTINGS = {
+    'site_title': 'Magnata',
+    'site_brand': 'Magnata',
+    'site_logo': "images/magnata-logo.png"
 }
 
 # Email config
