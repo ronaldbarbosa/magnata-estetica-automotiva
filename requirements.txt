@@ -4,6 +4,7 @@ charset-normalizer==3.1.0
 cloudinary==1.32.0
 Django==4.2
 django-cloudinary-storage==0.3.0
+django-jazzmin==2.6.0
 idna==3.4
 Pillow==9.5.0
 python-decouple==3.8
