@@ -3,7 +3,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Magnata - Estética Automotiva</title>
+    <title>{% block title %} Magnata - Estética Automotiva {% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="{% static 'images/magnata-icon.ico' %}">
     <!-- Styles -->
@@ -17,13 +17,15 @@
 <body class="d-flex flex-column min-vh-100">
 <header class="d-flex justify-content-between align-items-center bg-color-dark">
     <div class="d-flex align-items-center">
-        <div class="magnata-visual d-flex">
-            <img src="{% static 'images/magnata-logo.png' %}" class="logo-img bg-color-dark">
-            <div class="d-flex flex-column justify-content-center align-items-center">
-                <h1 class="">Magnata</h1>
-                <h2 class="text-center">Estética Automotiva</h2>
+        <a href="{% url 'index' %}">
+            <div class="magnata-visual d-flex">
+                <img src="{% static 'images/magnata-logo.png' %}" class="logo-img bg-color-dark">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <h1 class="">Magnata</h1>
+                    <h2 class="text-center">Estética Automotiva</h2>
+                </div>
             </div>
-        </div>
+        </a>
         <i id="burguer" class="material-icons mb-3 mx-3 text-light" onclick="clickMenu()">menu</i>
     </div>
     <nav class="d-flex">
