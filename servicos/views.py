@@ -1,6 +1,8 @@
 from django.shortcuts import render
 
-from .models import Servico
+from .models import Servico, Promocao
+
+
 def servicos(request):
   tipo_veiculo = request.GET.get('tipo_veiculo')
   categoria_servico = request.GET.get('categoria_servico')
@@ -55,3 +57,9 @@ def servico_info(request, id):
     'servico': Servico.objects.get(id=id)
   }
   return render(request, 'servicos/servico-info.html', context)
+
+def promocao_info(request, id):
+  context = {
+    'promocao': Promocao.objects.get(id=id)
+  }
+  return render(request, 'servicos/promocao-info.html', context)

@@ -1,0 +1,29 @@
+{% extends 'magnata_app/base.html' %}
+{% load static %}
+{% block body %}
+    <div class="servico-info d-flex justify-content-center my-5">
+        <div class="shadow p-3">
+            <div class="d-flex flex-column">
+                <div class="d-flex flex-column align-items-center mb-5">
+                    <h2 class="mb-3">{{ promocao.servico.nome }}</h2>
+                    <img src="{{ promocao.servico.imagem.url }}" class="servico-info-img">
+                </div>
+                <div>
+                    <h4>Sobre a promoção:</h4>
+                    <p class="text-center">{{ promocao.descricao }}</p>
+                    <h5>Sobre o serviço:</h5>
+                    <p class="text-center">{{ promocao.servico.descricao }}</p>
+                </div>
+                <div class="d-flex justify-content-sm-around mt-auto">
+                    <p>Tipo de serviço: <span class="badge text-bg-success">{{ promocao.servico.categoria }}</span></p>
+                    <p>Interno ou externo: <span class="badge text-bg-success">{{ promocao.servico.tipo_servico }}</span></p>
+                </div>
+                <div class="d-flex flex-row justify-content-center align-items-center mt-4 mt-auto">
+                    <p class="fs-5 mx-3 text-decoration-line-through">De: R$ {{ promocao.servico.preco_base }}</p>
+                    <p class="fs-3 mx-3">Por: R$ {{ promocao.preco_promocao }}</p>
+                </div>
+                <p class="text-center">Promoção válida até: {{ promocao.valido_ate }}</p>
+            </div>
+        </div>
+    </div>
+{% endblock body %}

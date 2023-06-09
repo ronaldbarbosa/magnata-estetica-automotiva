@@ -1,7 +1,7 @@
 {% extends 'magnata_app/base.html' %}
 {% load static %}
 {% block body %}
-    <div class="servico-info d-flex justify-content-center my-5">
+    <div class="servico-info d-flex flex-column align-items-center my-5">
         <div class="shadow p-3">
             <div class="d-flex flex-column">
                 <div class="d-flex flex-column align-items-center mb-5">
@@ -20,6 +20,9 @@
                     <p class="fs-5">À partir de: R$ {{ servico.preco_base }}</p>
                 </div>
             </div>
+        </div>
+        <div class="d-flex w-75 justify-content-center mt-5">
+            <a href="{% url 'index' %}" class="btn btn-dark">Início</a>
         </div>
     </div>
 {% endblock body %}

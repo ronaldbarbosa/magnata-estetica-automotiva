@@ -17,7 +17,7 @@
                 De R$<span class="text-decoration-line-through">{{promocao.servico.preco_base}}</span>
                 por R$<span>{{promocao.preco_promocao}}</span>
               </p>
-              <p class="btn btn-dark"><a href="" class="text-light">Saiba mais</a></p>
+              <p class="btn btn-dark"><a href="{% url 'promocao_info' promocao.id %}" class="text-light">Saiba mais</a></p>
             </div>
           </div>
         </div>
