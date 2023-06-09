@@ -8,9 +8,11 @@
                 <div class="d-flex flex-column align-items-center mb-5">
                     <h2 class="">{{ servico.nome }}</h2>
                     <img src="{{ servico.imagem.url }}" class="servico-info-img">
-                    <div class="servico-info-video d-flex w-100 justify-content-center mt-5">
-                        <video controls src="{{ servico.video.url }}"></video>
-                    </div>
+                    {% if servico.video %}
+                        <div class="servico-info-video d-flex w-100 justify-content-center mt-5">
+                            <video controls src="{{ servico.video.url }}"></video>
+                        </div>
+                    {% endif %}
                 </div>
                 <div>
                     <h4>Sobre o serviço:</h4>
