@@ -96,6 +96,10 @@ JAZZMIN_SETTINGS = {
     'site_logo': "images/magnata-logo.png"
 }
 
+JAZZMIN_UI_TWEAKS = {
+    "theme": "darkly",
+}
+
 # Email config
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
