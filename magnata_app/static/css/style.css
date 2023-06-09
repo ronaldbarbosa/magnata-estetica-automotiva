@@ -172,6 +172,18 @@ main {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+/* Serviço info */
+.servico-info > div {
+    width: 75%;
+}
+
+.servico-info-img {
+    max-width:500px;
+    max-height:350px;
+    width: auto;
+    height: auto;
+}
+
 /*Serviços*/
 .servicos {
     flex-wrap: wrap;

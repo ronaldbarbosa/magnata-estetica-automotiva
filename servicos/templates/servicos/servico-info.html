@@ -1,5 +1,25 @@
 {% extends 'magnata_app/base.html' %}
 {% load static %}
 {% block body %}
-    {{ servico }}
+    <div class="servico-info d-flex justify-content-center my-5">
+        <div class="shadow p-3">
+            <div class="d-flex flex-column">
+                <div class="d-flex flex-column align-items-center mb-5">
+                    <h2 class="">{{ servico.nome }}</h2>
+                    <img src="{{ servico.imagem.url }}" class="servico-info-img">
+                </div>
+                <div>
+                    <h4>Sobre o serviço:</h4>
+                    <p class="text-center">{{ servico.descricao }}</p>
+                </div>
+                <div class="d-flex justify-content-sm-around mt-auto">
+                    <p>Tipo de serviço: <span class="badge text-bg-success">{{ servico.categoria }}</span></p>
+                    <p>Interno ou externo: <span class="badge text-bg-success">{{ servico.tipo_servico }}</span></p>
+                </div>
+                <div class="d-flex flex-row justify-content-between align-items-center mt-4 mt-auto">
+                    <p class="fs-5">À partir de: R$ {{ servico.preco_base }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock body %}

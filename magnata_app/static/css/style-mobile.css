@@ -113,6 +113,10 @@ main {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.servico-info > div {
+    width: 95%;
+}
+
 /* Serviços */
 .servicos {
     align-items: center;
