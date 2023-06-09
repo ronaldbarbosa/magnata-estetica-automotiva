@@ -43,7 +43,7 @@ class Servico(models.Model):
     tipo_veiculo = models.CharField(max_length=1, choices=TIPO_VEICULO, verbose_name='Tipo de veículo')
     preco_base = models.DecimalField(max_digits=6, decimal_places=2)
     imagem = CloudinaryField('image')
-    video = CloudinaryField('video', blank=True)
+    video = CloudinaryField(resource_type='video', blank=True)
 
     def __str__(self):
         return f'{self.nome}'

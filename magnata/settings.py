@@ -101,7 +101,6 @@ JAZZMIN_UI_TWEAKS = {
 }
 
 # Email config
-
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.outlook.com'
 EMAIL_PORT = 587

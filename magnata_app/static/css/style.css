@@ -179,9 +179,13 @@ main {
 
 .servico-info-img {
     max-width:500px;
-    max-height:350px;
+    max-height:550px;
     width: auto;
     height: auto;
+}
+
+.servico-info-video {
+    background-color: #111010;
 }
 
 /*Serviços*/
