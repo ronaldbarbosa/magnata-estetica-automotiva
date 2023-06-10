@@ -97,7 +97,7 @@ JAZZMIN_SETTINGS = {
 }
 
 JAZZMIN_UI_TWEAKS = {
-    "theme": "darkly",
+    "theme": "yeti",
 }
 
 # Email config

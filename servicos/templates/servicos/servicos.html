@@ -19,7 +19,11 @@
       <h3 class="fs-5">Qual tipo de serviço está buscando?</h3>
       <div>
         <a href="{% url 'resultados' %}?categoria_servico=simples&tipo_veiculo={{tipo_veiculo}}" class="btn btn-dark">Simples</a>
-        <a href="{% url 'servicos' %}?categoria_servico=detalhado&tipo_veiculo={{tipo_veiculo}}" class="btn btn-dark">Detalhado</a>
+        {% if tipo_veiculo == 'carro' %}
+          <a href="{% url 'servicos' %}?categoria_servico=detalhado&tipo_veiculo={{tipo_veiculo}}" class="btn btn-dark">Detalhado</a>
+        {% else %}
+          <a href="{% url 'resultados' %}?categoria_servico=detalhado&tipo_veiculo={{tipo_veiculo}}" class="btn btn-dark">Detalhado</a>
+        {% endif %}
       </div>
     </div>
   {% endif %}
