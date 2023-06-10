@@ -133,6 +133,10 @@ main {
     opacity: 1;
 }
 
+.servico-info-img {
+    max-width: 100% !important;
+}
+
 /* Contato */
 .form-contato {
     width: 90%;
