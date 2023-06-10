@@ -1,5 +1,6 @@
 from cloudinary.models import CloudinaryField
 from django.db import models
+from . import signals
 
 TIPO_VEICULO = [
     ('C', 'Carro'),
