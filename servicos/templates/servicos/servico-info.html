@@ -26,6 +26,17 @@
                     <p class="fs-5">À partir de: R$ {{ servico.preco_base }}</p>
                 </div>
             </div>
+            <div class="text-center mt-3">
+                <h5>Mais informações</h5>
+                <div class="d-flex justify-content-center my-4">
+                    <a href="{% url 'contato' %}" class="mx-3">
+                        <img src="{% static 'images/mail.png' %}" alt="">
+                    </a>
+                    <a href="https://wa.me/5524999492709?text=Teste" target="_blank" class="mx-3">
+                        <img src="{% static 'images/whatsapp.png' %}" alt="">
+                    </a>
+                </div>
+            </div>
         </div>
         <div class="d-flex w-75 justify-content-center mt-5">
             <a href="{% url 'index' %}" class="btn btn-dark">Início</a>
