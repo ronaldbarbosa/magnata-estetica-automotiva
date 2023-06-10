@@ -1,0 +1,28 @@
+{% extends 'magnata_app/base.html' %}
+{% block title %} Magnata - Contato: {{ enviado }} {% endblock %}
+{% load static %}
+{% block body %}
+  {% if enviado == 'sucesso' %}
+    <div class="d-flex flex-column w-100 align-items-center mt-3">
+      <div class="img-sucesso">
+        <img src="{% static 'images/sucesso.png' %}">
+      </div>
+      <div class="text-center my-3 mx-1">
+        <h5>Sua mensagem foi enviada com sucesso!</h5>
+        <p>Em breve você receberá nossa resposta em seu WhatsApp ou e-mail.</p>
+      </div>
+      <a href="{% url 'index' %}" class="btn btn-dark mb-5">Voltar para a página inicial</a>
+    </div>
+  {% else %}
+    <div class="d-flex flex-column w-100 align-items-center mt-3">
+      <div class="img-erro">
+        <img src="{% static 'images/erro.jpg' %}">
+      </div>
+      <div class="text-center my-3 mx-1">
+        <h5>Oops! Ocorreu um erro!</h5>
+        <p>Fique tranquilo, estamos cientes e trabalhando na correção.</p>
+      </div>
+      <a href="{% url 'index' %}" class="btn btn-dark mb-5">Voltar para a página inicial</a>
+    </div>
+  {% endif %}
+{% endblock body %}

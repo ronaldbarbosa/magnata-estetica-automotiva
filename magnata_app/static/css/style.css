@@ -215,3 +215,11 @@ main {
 .form-contato {
     width: 50%;
 }
+
+.img-erro > img {
+    max-height: 500px;
+}
+
+.img-sucesso > img {
+    max-height: 500px;
+}

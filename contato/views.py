@@ -1,5 +1,3 @@
-import asyncio
-
 from django.shortcuts import render
 from django.core.mail import send_mail
 from decouple import config
@@ -18,12 +16,14 @@ def contato(request):
   if form.is_valid():
     form_nome = form.cleaned_data['nome']
     form_email = form.cleaned_data['email']
+    form_celular = form.cleaned_data['celular']
     form_assunto = form.cleaned_data['assunto']
     form_mensagem = form.cleaned_data['mensagem']
 
     contato = Contato(
       nome=form_nome,
       email=form_email,
+      celular=form_celular,
       assunto=form_assunto,
       mensagem=form_mensagem
     )
@@ -32,13 +32,11 @@ def contato(request):
     sucesso = enviar_email(contato)
 
     if sucesso != 0:
-      return render(request, 'contato/contato.html', {
-        'form': ContatoForm,
+      return render(request, 'contato/contato-resultado.html', {
         'enviado': 'sucesso'
       })
     else:
-      return render(request, 'contato/contato.html', {
-        'form': ContatoForm,
+      return render(request, 'contato/contato-resultado.html', {
         'enviado': 'erro'
       })
 

@@ -8,4 +8,3 @@ class Contato(models.Model):
   assunto = models.CharField(max_length=50)
   mensagem = models.TextField(max_length=300)
   data = models.DateTimeField(auto_now_add=True)
-# TODO: adicionar data e hora do contato

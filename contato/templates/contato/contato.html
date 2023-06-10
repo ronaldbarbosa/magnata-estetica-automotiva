@@ -1,16 +1,7 @@
 {% extends 'magnata_app/base.html' %}
-{% block title %} Magnata - Contato {% endblock %}
+{% block title %} Magnata - Contato{% endblock %}
 {% load static %}
 {% block body %}
-  {% if enviado == 'sucesso' %}
-    <script>
-      window.alert('Mensagem enviada com sucesso!')
-    </script>
-  {% elif enviado == 'erro' %}
-      <script>
-        window.alert('Ocorreu um erro interno. Tente mais tarde :(')
-      </script>
-  {% endif %}
   <div class="d-flex flex-column my-5 w-100 align-items-center">
     <h3>Entre em contato</h3>
     <form class="form-contato" method="POST">
